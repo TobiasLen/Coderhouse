@@ -1,60 +1,107 @@
 
-
-.nav li a{
-    font-family: Arial, Helvetica, sans-serif;
-    list-style: none;
-    background-color: burlywood;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.nav li a{
-    text-decoration: none;
-    color:white;
-    padding: 20px;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.nav li{
-    display: inline-block;
-    text-align:center;
-}
-
-.nav li a:hover{
-    background: #ef8354;
-}
-.body {
-    background-image: url(../imagenes/Fondo_body.jpg);
+body {
+/*     background-image: url(../imagenes/Fondo_body.jpg); */
+    background-color:bisque;
     background-size: cover;
     width: 100%;
     height: 100%;
 }
 
-.main {
+nav{
+    height: 90px;
+    background-color: burlywood;
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    background-color: burlywood;
+}
+nav ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 1000px;
+}
+
+nav li a{
+    text-decoration: none;
+    color:white;
+    padding: 20px;
+}
+
+.active{
+    background: #ef8354;
+    border-radius: 10px;
+}
+
+nav li a:hover{
+    background: #ef8354;
+    border-radius: 10px;
+}
+
+nav img{
+    width: 70px;
+}
+
+
+main {
     font-family:Arial, Helvetica, sans-serif; 
 }
 
-.title {
-    font-size: 60px;
-    font-style: italic;
+main h1{
+    font-size: 100px;
+    color:black;
 }
 
+main p{
+    font-size: 40px;
+    color: black;
+}
 
-.tity {
+section{
+    font-size: 20px ;
+    color: black;
+}
+
+.pancasero img{
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.pancasero{
+    width: 800px;
     display: flex;
-    flex-direction:column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    margin-left: 10px;
 }
 
+.croissant img{
+    width: 275px;
+    margin-right: 20px;
 
-.pan casero{
-    width: 20px;
 }
 
+.croissant{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.tortafritas img{
+    margin-right: 20px;
+}
+
+.tortafritas{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+/* .sectionMercaderia img{
+    margin-bottom: 15px;
+} */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 *{
     margin: 0;
@@ -87,12 +134,12 @@
     width: 250px;
 }
 .pie-pagina .grupo-1 .box h2{
-    color: #fff;
+    color: black;
     margin-bottom: 25px;
     font-size: 20px;
 }
 .pie-pagina .grupo-1 .box p{
-    color: #efefef;
+    color: black;
     margin-bottom: 10px;
 }
 .pie-pagina .grupo-1 .red-social a{
@@ -101,7 +148,7 @@
     width: 45px;
     height: 45px;
     line-height: 45px;
-    color: #fff;
+    color: black;
     margin-right: 10px;
     background-color: burlywood;
     text-align: center;
@@ -114,7 +161,7 @@
     background-color: burlywood;
     padding: 15px 10px;
     text-align: center;
-    color: #fff;
+    color: black;
 }
 .pie-pagina .grupo-2 small{
     font-size: 15px;
