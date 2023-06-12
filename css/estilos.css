@@ -1,22 +1,27 @@
 
 body {
-/*     background-image: url(../imagenes/Fondo_body.jpg); */
     background-color:bisque;
     background-size: cover;
-    width: 100%;
-    height: 100%;
 }
 
-nav{
-    height: 90px;
-    background-color: burlywood;
-}
 
 header{
     width: 100%;
     height: 90px;
     background-color: burlywood;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
+nav{
+    height: 90px;
+    background-color: burlywood;
+    width: 100%;
+
+}
+
+
 nav ul{
     display:flex;
     flex-direction: row;
@@ -47,11 +52,15 @@ nav img{
 
 main {
     font-family:Arial, Helvetica, sans-serif; 
+    margin: 30px;
 }
+
 
 main h1{
     font-size: 100px;
-    color:black;
+    color:white;
+    background-color: brown;
+    border-radius: 5px;
 }
 
 main p{
@@ -62,11 +71,20 @@ main p{
 section{
     font-size: 20px ;
     color: black;
+    margin: 0 10px;
 }
+
+.sectionMercaderia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    margin-top: 100px;
+} 
+
 
 .pancasero img{
     margin-right: 20px;
-    margin-bottom: 30px;
 }
 
 .pancasero{
@@ -76,12 +94,30 @@ section{
     margin-left: 10px;
 }
 
+.panP {
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloPan {
+    font-size: 25px;
+    font-weight: bold;
+}
 .croissant img{
     width: 275px;
     margin-right: 20px;
 
 }
 
+.croissantP {
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloCroissant {
+    font-size: 25px;
+    font-weight: bold;
+}
 .croissant{
     width: 800px;
     display: flex;
@@ -99,9 +135,18 @@ section{
     flex-direction: row;
     margin-left: 10px;
 }
-/* .sectionMercaderia img{
-    margin-bottom: 15px;
-} */
+
+.tortaP {
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloTorta {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 *{
     margin: 0;
@@ -110,6 +155,11 @@ section{
     font-family: 'Open Sans', sans-serif;
 }
 /*:::::Pie de Pagina*/
+
+footer {
+    width: 100%;
+    margin-top: 100px;
+}
 .pie-pagina{
     width: 100%;
     
@@ -166,32 +216,101 @@ section{
 .pie-pagina .grupo-2 small{
     font-size: 15px;
 }
-@media screen and (max-width:800px){
+
+
+/* -------------------------------------------------RESPONSIVE------------------------------------------------ */
+
+
+@media screen and (max-width:768px){
+    header {
+        width: 100%;
+    }
+
+    header ul {
+        flex-direction: column;
+        background-color: burlywood;
+        align-items: center;
+        width: auto;
+    }
+
+    main h1 {
+        font-size: 50px;
+    }
+
+    .sectionMercaderia {
+        height: auto;
+    }
+
+    .sectionMercaderia .descripcion {
+        font-size: 20px;
+    }
+
+    .sectionMercaderia img {
+        width: 250px;
+    }
+
+    .croissant{
+        width: auto;
+        flex-direction: column;
+    }
+
+    .pancasero {
+        width: auto;
+        flex-direction: column;
+    }
+
+    .tortafritas {
+        width: auto;
+        flex-direction: column;
+    }
+    .pie-pagina {
+        width: 100%;
+    }
     .pie-pagina .grupo-1{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
         grid-gap:30px;
         padding: 35px 0px;
+        display: flex;
+        flex-wrap: wrap;
     }
-}
 
-@media screen and (max-width: 768px) {
+    .logoFooter {
+        height: 120px;
+        width: 120px;
+    }
+
+    .red-social {
+        display: flex;
+    }
+
     main h1 {
-    font-size: 60px;
+        padding-left: 30px;
     }
+
+    nav li a:hover{
+        background: #ef8354;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .active {
+        background: #ef8354;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     
-    main p {
-    font-size: 30px;
-    }
 }
 
-@media screen and (max-width: 768px) {
-    nav ul {
-    flex-direction: column;
-    align-items: center;
+@media screen and (max-width:425px){
+    main h1 {
+        font-size: 40px;
     }
-    
-    nav li {
-    margin-bottom: 10px;
+
+    footer {
+        margin-top: 50px;
     }
 }
