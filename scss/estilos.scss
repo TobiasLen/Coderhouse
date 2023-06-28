@@ -41,15 +41,22 @@ header{
 main {
     font-family:Arial, Helvetica, sans-serif; 
     margin: 30px;
+    display: flex;
+    width: auto;
+    flex-direction: column;
     h1{
         font-size: 100px;
         color:white;
         background-color: brown;
         border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        padding-right: 25px;
     }
     p{
         font-size: 40px;
         color: $colorMain;
+        margin: 50px;
     }
 }
 
@@ -57,6 +64,53 @@ section{
     font-size: 20px ;
     color: $colorMain;
     margin: 0 10px;
+}
+
+.sectionProductos {
+    margin: 20px;
+    img{
+        width: 300px;
+        height: auto;
+        border-radius: 50%;
+    }
+    .pizza{
+        font-size: 50px;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content:right;
+    }
+    .cañoncitoDdl{
+        font-size: 50px;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content:right;
+    }
+    .sangucheMiga{
+        font-size: 50px;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+    }
+    .empanada{
+        font-size: 50px;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+    }
+}
+
+
+.sectionIndex{
+    display: flex;
+    flex-direction: column;
+    p{
+        font-size: 30px;
+        font-weight: lighter;
+        font-style: oblique;    
+        margin: 10px;
+    }
 }
 
 .sectionAyuda {
@@ -68,10 +122,21 @@ section{
         font-style: italic;
     }
     .maps {
-        font-size: 100%;
-    }
-    .mapa {
-        width: 500px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: stretch;
+        p {
+            font-size: 30px;
+            width: 900px;
+            margin: 20px;
+            margin-left: 50px;
+            align-self: center;
+        }
+        .mapa {
+            height: auto;
+            margin: 20px;
+        }
     }
 }
 .sectionMercaderia {
@@ -128,7 +193,7 @@ section{
     }
 }
 
-.quienesSomos a{
+.quienesRedes a{
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -208,16 +273,67 @@ footer {
 @media screen and (max-width:768px){
     header {
         width: 100%;
+        margin-right: auto;
     }
         ul {
             flex-direction: column;
-            background-color: burlywood;
+            background-color: $fondo;
             align-items: center;
-            width: auto;
+            width: 100%;
         }    
     }
     main h1 {
         font-size: 50px;
+    }
+
+    .sectionAyuda {
+        .maps{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .mapa{
+                width: auto;
+            }
+            p{
+                width: auto;
+                margin: 5px;
+            }
+        }
+    }
+
+    .sectionProductos {
+        margin: 20px;
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .pizza{
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            justify-content:right;
+        }
+        .cañoncitoDdl{
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            justify-content:right;
+        }
+        .sangucheMiga{
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+        }
+        .empanada{
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+        }
     }
 
     .sectionMercaderia {
@@ -276,6 +392,14 @@ footer {
 
 
 @media screen and (max-width:425px){
+    header{
+        nav{
+            ul{
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
     main h1 {
         font-size: 40px;
     }
