@@ -1,0 +1,285 @@
+@import "utilidades";
+body {
+    background-color: $biscocho;
+    background-size: cover;
+}
+header{
+    width: 100%;
+    height: 90px;
+    background-color: $fondo;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    nav{
+        height: 90px;
+        background-color: $fondo;
+        width: 100%;
+        ul{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 1000px;
+        }
+        li a{
+            text-decoration: none;
+            color:white;
+            padding: 20px;
+            &:hover{
+                background: #ef8354;
+                border-radius: 10px;
+            }
+        }
+        .active{
+            background: #ef8354;
+            border-radius: 10px;
+        }
+        img{
+            width: 70px;
+        }
+    }
+}
+main {
+    font-family:Arial, Helvetica, sans-serif; 
+    margin: 30px;
+    h1{
+        font-size: 100px;
+        color:white;
+        background-color: brown;
+        border-radius: 5px;
+    }
+    p{
+        font-size: 40px;
+        color: $colorMain;
+    }
+}
+
+section{
+    font-size: 20px ;
+    color: $colorMain;
+    margin: 0 10px;
+}
+
+.sectionAyuda {
+    display: flex;
+    flex-direction:column;
+    p {
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    .maps {
+        font-size: 100%;
+    }
+    .mapa {
+        width: 500px;
+    }
+}
+.sectionMercaderia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    margin-top: 100px;
+    .pancasero{
+        width: 800px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+        .panP {
+            display: flex;
+            flex-direction: column;
+        }
+        img{
+            margin-right: 20px;
+        }
+        .tituloPan {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    }
+    .croissant{
+        @extend .pancasero;
+        .tituloCroissant {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .croissantP {
+            display: flex;
+            flex-direction: column;
+        }
+        img{
+            width: 275px;
+            margin-right: 20px;
+        }
+    }
+    .tortafritas{
+        @extend .pancasero;
+        .tituloTorta {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .tortaP {
+            display: flex;
+            flex-direction: column;
+        }
+        img{
+            margin-right: 20px;
+        }
+    }
+}
+
+.quienesSomos a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: $colorMain;
+    margin-right: 10px;
+    background-color: $fondo;
+    text-align: center;
+    transition: all 300ms ease;
+    &:hover{
+        color: aqua;
+    }
+}
+
+footer {
+    width: 100%;
+    margin-top: 100px;
+}
+.pie-pagina{
+    width: 100%;
+    .grupo-1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:50px;
+        padding: 45px 0px;
+        .box{
+            figure{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            figure img{
+                width: 250px;
+            }
+            h2{
+                color: $colorMain;
+                margin-bottom: 25px;
+                font-size: 20px;
+            }
+            p{
+                color: $colorMain;
+                margin-bottom: 10px;
+            }
+        }
+        .red-social a{
+            display: inline-block;
+            text-decoration: none;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            color: $colorMain;
+            margin-right: 10px;
+            background-color: $fondo;
+            text-align: center;
+            transition: all 300ms ease;
+            &:hover{
+                color: aqua;
+            }
+        }
+    }
+    .grupo-2{
+        background-color: $fondo;
+        padding: 15px 10px;
+        text-align: center;
+        color: $colorMain;
+        small{
+            font-size: 15px;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    header {
+        width: 100%;
+    }
+        ul {
+            flex-direction: column;
+            background-color: burlywood;
+            align-items: center;
+            width: auto;
+        }    
+    }
+    main h1 {
+        font-size: 50px;
+    }
+
+    .sectionMercaderia {
+        height: auto;
+        .descripcion {
+            font-size: 20px;
+        }
+        img {
+            width: 250px;
+        }
+        .croissant{
+            @include flex
+        }
+        .pancasero {
+            @include flex
+        }
+        .tortafritas {
+            @include flex
+        }
+    }
+    .pie-pagina {
+        width: 100%;
+        .grupo-1{
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap:30px;
+            padding: 35px 0px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    .logoFooter {
+        height: 120px;
+        width: 120px;
+    }
+    .red-social {
+        display: flex;
+    }
+    main h1 {
+        padding-left: 30px;
+    }
+    nav li a:hover{
+        background: #ef8354;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px
+    }
+    
+    .active {
+        background: #ef8354;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+@media screen and (max-width:425px){
+    main h1 {
+        font-size: 40px;
+    }
+    footer {
+        margin-top: 50px;
+    }
+}

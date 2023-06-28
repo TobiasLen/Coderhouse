@@ -1,316 +1,289 @@
-
 body {
-    background-color:bisque;
-    background-size: cover;
+  background-color: bisque;
+  background-size: cover;
 }
 
-
-header{
-    width: 100%;
-    height: 90px;
-    background-color: burlywood;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+header {
+  width: 100%;
+  height: 90px;
+  background-color: burlywood;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
-nav{
-    height: 90px;
-    background-color: burlywood;
-    width: 100%;
-
+header nav {
+  height: 90px;
+  background-color: burlywood;
+  width: 100%;
 }
-
-
-nav ul{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 1000px;
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 1000px;
 }
-
-nav li a{
-    text-decoration: none;
-    color:white;
-    padding: 20px;
+header nav li a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
 }
-
-.active{
-    background: #ef8354;
-    border-radius: 10px;
+header nav li a:hover {
+  background: #ef8354;
+  border-radius: 10px;
 }
-
-nav li a:hover{
-    background: #ef8354;
-    border-radius: 10px;
+header nav .active {
+  background: #ef8354;
+  border-radius: 10px;
 }
-
-nav img{
-    width: 70px;
+header nav img {
+  width: 70px;
 }
-
 
 main {
-    font-family:Arial, Helvetica, sans-serif; 
-    margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
+}
+main h1 {
+  font-size: 100px;
+  color: white;
+  background-color: brown;
+  border-radius: 5px;
+}
+main p {
+  font-size: 40px;
+  color: black;
 }
 
-
-main h1{
-    font-size: 100px;
-    color:white;
-    background-color: brown;
-    border-radius: 5px;
+section {
+  font-size: 20px;
+  color: black;
+  margin: 0 10px;
 }
 
-main p{
-    font-size: 40px;
-    color: black;
+.sectionAyuda {
+  display: flex;
+  flex-direction: column;
 }
-
-section{
-    font-size: 20px ;
-    color: black;
-    margin: 0 10px;
+.sectionAyuda p {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+.sectionAyuda .maps {
+  font-size: 100%;
+}
+.sectionAyuda .mapa {
+  width: 500px;
 }
 
 .sectionMercaderia {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 600px;
-    margin-top: 100px;
-} 
-
-
-.pancasero img{
-    margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
+  margin-top: 100px;
+}
+.sectionMercaderia .pancasero, .sectionMercaderia .tortafritas, .sectionMercaderia .croissant {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+.sectionMercaderia .pancasero .panP, .sectionMercaderia .tortafritas .panP, .sectionMercaderia .croissant .panP {
+  display: flex;
+  flex-direction: column;
+}
+.sectionMercaderia .pancasero img, .sectionMercaderia .tortafritas img, .sectionMercaderia .croissant img {
+  margin-right: 20px;
+}
+.sectionMercaderia .pancasero .tituloPan, .sectionMercaderia .tortafritas .tituloPan, .sectionMercaderia .croissant .tituloPan {
+  font-size: 25px;
+  font-weight: bold;
+}
+.sectionMercaderia .croissant .tituloCroissant {
+  font-size: 25px;
+  font-weight: bold;
+}
+.sectionMercaderia .croissant .croissantP {
+  display: flex;
+  flex-direction: column;
+}
+.sectionMercaderia .croissant img {
+  width: 275px;
+  margin-right: 20px;
+}
+.sectionMercaderia .tortafritas .tituloTorta {
+  font-size: 25px;
+  font-weight: bold;
+}
+.sectionMercaderia .tortafritas .tortaP {
+  display: flex;
+  flex-direction: column;
+}
+.sectionMercaderia .tortafritas img {
+  margin-right: 20px;
 }
 
-.pancasero{
-    width: 800px;
-    display: flex;
-    flex-direction: row;
-    margin-left: 10px;
+.quienesSomos a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: black;
+  margin-right: 10px;
+  background-color: burlywood;
+  text-align: center;
+  transition: all 300ms ease;
 }
-
-.panP {
-    display: flex;
-    flex-direction: column;
+.quienesSomos a:hover {
+  color: aqua;
 }
-
-.tituloPan {
-    font-size: 25px;
-    font-weight: bold;
-}
-.croissant img{
-    width: 275px;
-    margin-right: 20px;
-
-}
-
-.croissantP {
-    display: flex;
-    flex-direction: column;
-}
-
-.tituloCroissant {
-    font-size: 25px;
-    font-weight: bold;
-}
-.croissant{
-    width: 800px;
-    display: flex;
-    flex-direction: row;
-    margin-left: 10px;
-}
-
-.tortafritas img{
-    margin-right: 20px;
-}
-
-.tortafritas{
-    width: 800px;
-    display: flex;
-    flex-direction: row;
-    margin-left: 10px;
-}
-
-.tortaP {
-    display: flex;
-    flex-direction: column;
-}
-
-.tituloTorta {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-/*:::::Pie de Pagina*/
 
 footer {
-    width: 100%;
-    margin-top: 100px;
+  width: 100%;
+  margin-top: 100px;
 }
-.pie-pagina{
-    width: 100%;
-    
+
+.pie-pagina {
+  width: 100%;
 }
-.pie-pagina .grupo-1{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
-    padding: 45px 0px;
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
 }
-.pie-pagina .grupo-1 .box figure{
+.pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img {
+  width: 250px;
+}
+.pie-pagina .grupo-1 .box h2 {
+  color: black;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p {
+  color: black;
+  margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: black;
+  margin-right: 10px;
+  background-color: burlywood;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: aqua;
+}
+.pie-pagina .grupo-2 {
+  background-color: burlywood;
+  padding: 15px 10px;
+  text-align: center;
+  color: black;
+}
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+  }
+  ul {
+    flex-direction: column;
+    background-color: burlywood;
     align-items: center;
+    width: auto;
+  }
 }
-.pie-pagina .grupo-1 .box figure img{
-    width: 250px;
-}
-.pie-pagina .grupo-1 .box h2{
-    color: black;
-    margin-bottom: 25px;
-    font-size: 20px;
-}
-.pie-pagina .grupo-1 .box p{
-    color: black;
-    margin-bottom: 10px;
-}
-.pie-pagina .grupo-1 .red-social a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: black;
-    margin-right: 10px;
-    background-color: burlywood;
-    text-align: center;
-    transition: all 300ms ease;
-}
-.pie-pagina .grupo-1 .red-social a:hover{
-    color: aqua;
-}
-.pie-pagina .grupo-2{
-    background-color: burlywood;
-    padding: 15px 10px;
-    text-align: center;
-    color: black;
-}
-.pie-pagina .grupo-2 small{
-    font-size: 15px;
+main h1 {
+  font-size: 50px;
 }
 
-
-/* -------------------------------------------------RESPONSIVE------------------------------------------------ */
-
-
-@media screen and (max-width:768px){
-    header {
-        width: 100%;
-    }
-
-    header ul {
-        flex-direction: column;
-        background-color: burlywood;
-        align-items: center;
-        width: auto;
-    }
-
-    main h1 {
-        font-size: 50px;
-    }
-
-    .sectionMercaderia {
-        height: auto;
-    }
-
-    .sectionMercaderia .descripcion {
-        font-size: 20px;
-    }
-
-    .sectionMercaderia img {
-        width: 250px;
-    }
-
-    .croissant{
-        width: auto;
-        flex-direction: column;
-    }
-
-    .pancasero {
-        width: auto;
-        flex-direction: column;
-    }
-
-    .tortafritas {
-        width: auto;
-        flex-direction: column;
-    }
-    .pie-pagina {
-        width: 100%;
-    }
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .logoFooter {
-        height: 120px;
-        width: 120px;
-    }
-
-    .red-social {
-        display: flex;
-    }
-
-    main h1 {
-        padding-left: 30px;
-    }
-
-    nav li a:hover{
-        background: #ef8354;
-        border-radius: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .active {
-        background: #ef8354;
-        border-radius: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    
+.sectionMercaderia {
+  height: auto;
+}
+.sectionMercaderia .descripcion {
+  font-size: 20px;
+}
+.sectionMercaderia img {
+  width: 250px;
+}
+.sectionMercaderia .croissant {
+  flex-direction: column;
+  width: auto;
+}
+.sectionMercaderia .pancasero, .sectionMercaderia .croissant, .sectionMercaderia .tortafritas {
+  flex-direction: column;
+  width: auto;
+}
+.sectionMercaderia .tortafritas {
+  flex-direction: column;
+  width: auto;
 }
 
-@media screen and (max-width:425px){
-    main h1 {
-        font-size: 40px;
-    }
-
-    footer {
-        margin-top: 50px;
-    }
+.pie-pagina {
+  width: 100%;
 }
+.pie-pagina .grupo-1 {
+  width: 90%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+  padding: 35px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logoFooter {
+  height: 120px;
+  width: 120px;
+}
+
+.red-social {
+  display: flex;
+}
+
+main h1 {
+  padding-left: 30px;
+}
+
+nav li a:hover {
+  background: #ef8354;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.active {
+  background: #ef8354;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 425px) {
+  main h1 {
+    font-size: 40px;
+  }
+  footer {
+    margin-top: 50px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

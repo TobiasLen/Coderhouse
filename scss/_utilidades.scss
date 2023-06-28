@@ -1,0 +1,9 @@
+$biscocho: bisque;
+$colorMain: black;
+$fondo: burlywood;
+
+@mixin flex{
+    flex-direction: column;
+    width: auto;
+}
+
